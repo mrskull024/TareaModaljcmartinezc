@@ -1,0 +1,44 @@
+:root{
+    --generalFont: 'Source Sans Pro', sans-serif;
+    --generalBackground: rgb(65, 65, 250);
+    --generalFontColor: white;
+}
+body{
+    font-family: var(--generalFont);
+}
+legend{
+    font-family: var(--generalFont);
+}
+table,th,tr,td{
+    font-family: var(--generalFont);
+}
+table{
+    border: 1px solid;
+    width: 100%;
+}
+th{
+    background-color: var(--generalBackground);
+    color: var(--generalFontColor);
+}
+th,td{
+    padding: 15px;
+    text-align: left;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+button{
+    background-color: var(--generalBackground);
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: var(--generalFont);
+    padding: 6px 18px;
+    border: none;
+    color: var(--generalFontColor);
+}
+h3{
+    font:var(--generalFont);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}

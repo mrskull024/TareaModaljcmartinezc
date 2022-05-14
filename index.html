@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Modal AGM</title>
+    <link rel="stylesheet" href="assets/css/siteAGM.css">
+    <link rel="stylesheet" href="assets/css/siteAGMModal.css">
+    
+    
+</head>
+<body>
+    <h3>Operaciones Crud usando Javascript y Modales</h3>
+    <button id="btnModalBody">Añadir Persona</button>
+    <hr>
+    <div id="modalBody" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h3>Formulario CRUD</h3>
+                <hr>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <legend>Datos 1 - Generales</legend>
+                    </table>
+                    <label for="cedula">Cédula</label>
+                    <input type="text" onkeyup="quitarGuion()" name="cedula" id="cedula" >
+                    <button onclick="return ValidarCedula(cedula.value);">
+                            Validar Cédula
+                    </button>
+                    <br>
+                    <label for="nombres">Nombres</label>
+                    <input type="text" name="nombres" id="nombres">
+                    <br>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos">
+                    <br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos 2 - Sexo</legend>
+                    <input type="radio" name="radioSx" value="Masculino" id="rdMasculino">Masculino
+                    <br>
+                    <input type="radio" name="radioSx" value="Femenino" id="rdFemenino">Femenino
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos 3 - Pasatiempos</legend>
+                    <input type="checkbox" name="chkPasatiempo" value="Cantar" >Cantar
+                    <input type="checkbox" name="chkPasatiempo" value="Pintar" >Pintar
+                    <input type="checkbox" name="chkPasatiempo" value="Bailar" >Bailar
+                    <input type="checkbox" name="chkPasatiempo" value="Programar" >Programar
+                    <input type="checkbox" name="chkPasatiempo" value="Patinar">Patinar
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos Calculados</legend>
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" readonly>
+                    <button onclick="calcularEdad()">
+                        Cálcular Edad
+                    </button>
+                    <br>
+                    <label for="departamento">Departamento</label>
+                    <input type="text" name="departamento" id="departamento" readonly>
+                    <button onclick="determinarZona()">
+                        Determinar Zona
+                    </button>
+                </fieldset>
+                <hr>
+                <img src='assets/img/pen.svg'>
+                <button id="btnSave" onclick="insertData()">Registrar</button>
+                <img src='assets/img/trash.svg'>
+                <button id="btnUpdate" onclick="updateData()">Modificar</button>
+            </div>
+        </div>
+            
+            
+        </div>
+    </div>
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <table id="tablaRegistros">
+           <tr>
+               <th>Género</th>
+               <th>Cédula</th>
+               <th>Nombres</th>
+               <th>Apellidos</th>
+               <th>Sexo</th>
+               <th>Edad (Calculada)</th>
+               <th>Departamento (Calculada)</th>
+               <th>Pasatiempos</th>
+               <th>Acciones Crud</th>
+           </tr>
+        </table>
+    </fieldset>
+    <script src="assets/js/siteAGMModal.js"></script>
+    <script src="assets/js/siteAGM.js"></script>
+    <script src="assets/js/validarCedula.js"></script>
+</body>
+</html>
